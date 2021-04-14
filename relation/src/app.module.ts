@@ -2,6 +2,7 @@ import { Module } from '@nestjs/common';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
+import { Attendee } from './events/attendee.entity';
 import { Event } from './events/event.entity';
 import { EventModule } from './events/event.module';
 
@@ -15,7 +16,8 @@ import { EventModule } from './events/event.module';
       password: 'example',
       database: 'nest-events',
       entities: [
-        Event
+        Event,
+        Attendee
       ],
       synchronize: true
     }),

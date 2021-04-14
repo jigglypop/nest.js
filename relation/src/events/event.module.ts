@@ -6,7 +6,7 @@ import { Event } from './event.entity';
 @Module({
   imports: [
     TypeOrmModule.forFeature([
-      Event
+      Event,
     ])
   ],
   controllers: [
